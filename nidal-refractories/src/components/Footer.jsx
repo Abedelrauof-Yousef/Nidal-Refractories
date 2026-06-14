@@ -16,7 +16,7 @@ function Footer() {
     >
       {/* Main footer body */}
       <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '56px 32px 40px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.6fr 1fr 1fr', gap: '48px', alignItems: 'start' }}>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '48px', alignItems: 'start' }}>
 
           {/* Brand column */}
           <div>
