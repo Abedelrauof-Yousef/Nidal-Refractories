@@ -66,11 +66,13 @@ function WhyChooseUsSection() {
     },
   ]
 
+  const isMobile = window.innerWidth < 768
+
   return (
     <section
       dir="rtl"
       style={{
-        padding: '96px 32px',
+        padding: isMobile ? '64px 16px' : '96px 32px',
         backgroundColor: '#18181f',
         borderTop: '0.5px solid #242430',
       }}
@@ -95,7 +97,7 @@ function WhyChooseUsSection() {
             style={{
               margin: '0 0 12px',
               color: '#ffffff',
-              fontSize: '36px',
+              fontSize: 'clamp(24px, 5vw, 36px)',
               fontWeight: 800,
               lineHeight: 1.2,
             }}
@@ -113,35 +115,50 @@ function WhyChooseUsSection() {
           />
         </div>
 
-        {/* Cards grid: 3 + 2 layout */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '20px',
-          }}
-        >
-          {reasons.slice(0, 3).map(reason => (
-            <ReasonCard key={reason.id} reason={reason} />
-          ))}
-        </div>
+        {/* Cards grid: 1 col mobile, 3+2 desktop */}
+{/* CSS for mobile */}
+<style>{`
+  @media (max-width: 767px) {
+    .top-grid, .bottom-grid {
+      grid-template-columns: 1fr !important;
+      max-width: 100% !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+    }
+  }
+`}</style>
 
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(2, 1fr)',
-            gap: '20px',
-            marginTop: '20px',
-            maxWidth: 'calc(66.666% + 10px)',
-            /* center the bottom row */
-            marginLeft: 'auto',
-            marginRight: 'auto',
-          }}
-        >
-          {reasons.slice(3).map(reason => (
-            <ReasonCard key={reason.id} reason={reason} />
-          ))}
-        </div>
+{/* Top 3 cards */}
+<div
+  className="top-grid"
+  style={{
+    display: 'grid',
+    gridTemplateColumns: 'repeat(3, 1fr)',
+    gap: '20px',
+  }}
+>
+  {reasons.slice(0, 3).map(reason => (
+    <ReasonCard key={reason.id} reason={reason} />
+  ))}
+</div>
+
+{/* Bottom 2 cards */}
+<div
+  className="bottom-grid"
+  style={{
+    display: 'grid',
+    gridTemplateColumns: 'repeat(2, 1fr)',
+    gap: '20px',
+    marginTop: '20px',
+    maxWidth: 'calc(66.666% + 10px)',
+    marginLeft: 'auto',
+    marginRight: 'auto',
+  }}
+>
+  {reasons.slice(3).map(reason => (
+    <ReasonCard key={reason.id} reason={reason} />
+  ))}
+</div>
 
       </div>
     </section>
@@ -228,13 +245,7 @@ function ReasonCard({ reason }) {
       </h3>
 
       {/* Divider */}
-      <div
-        style={{
-          height: '0.5px',
-          background: '#242430',
-          marginBottom: '12px',
-        }}
-      />
+      <div style={{ height: '0.5px', background: '#242430', marginBottom: '12px' }} />
 
       {/* Body */}
       <p

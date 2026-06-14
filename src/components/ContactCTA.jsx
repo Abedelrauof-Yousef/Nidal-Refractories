@@ -47,7 +47,7 @@ function ContactCTA() {
         }}>
           هل فرنك يحتاج خبيراً ؟
           <br />
-          <span style={{ color: '#f59e0b' }}>تحدث معنا اليوم</span>
+          <span style={{ color: '#f59e0b' }}>تواصل معي اليوم</span>
         </h2>
 
         {/* Subtext */}
@@ -113,7 +113,7 @@ function ContactCTA() {
               e.currentTarget.style.borderColor = '#f59e0b55'
             }}
           >
-            📞 اتصل بي مباشرة
+            ☎️ اتصل بي مباشرة
           </a>
         </div>
 

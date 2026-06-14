@@ -147,7 +147,7 @@ function ProductCard({ product, isOpen, onToggle }) {
         </div>
       </div>
 
-      {/* Expandable body — grid-rows trick for smooth height animation */}
+      {/* Expandable body */}
       <div
         style={{
           display: 'grid',
@@ -177,13 +177,7 @@ function ProductCard({ product, isOpen, onToggle }) {
               {product.description}
             </p>
 
-            <div
-              style={{
-                height: '0.5px',
-                background: '#242430',
-                marginBottom: '1.25rem',
-              }}
-            />
+            <div style={{ height: '0.5px', background: '#242430', marginBottom: '1.25rem' }} />
 
             <ul
               style={{
@@ -248,15 +242,18 @@ function ProductsSection() {
   }
 
   return (
-    <section style={{ padding: '96px 32px', backgroundColor: '#0c0c0f' }}>
+    <section style={{ padding: '96px 16px', backgroundColor: '#0c0c0f' }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
 
+        {/* Header */}
         <div
           style={{
             display: 'flex',
             alignItems: 'flex-end',
             justifyContent: 'space-between',
             marginBottom: '56px',
+            flexWrap: 'wrap',
+            gap: '16px',
           }}
         >
           <Link
@@ -295,7 +292,7 @@ function ProductsSection() {
               style={{
                 margin: '0 0 10px',
                 color: '#ffffff',
-                fontSize: '36px',
+                fontSize: 'clamp(24px, 5vw, 36px)',
                 fontWeight: 800,
               }}
             >
@@ -313,10 +310,11 @@ function ProductsSection() {
           </div>
         </div>
 
+        {/* Cards grid — 1 col on mobile, auto on desktop */}
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(340px, 100%), 1fr))',
             gap: '24px',
             alignItems: 'start',
           }}
@@ -331,6 +329,7 @@ function ProductsSection() {
           ))}
         </div>
 
+        {/* Bottom CTA */}
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
           <Link
             to="/products"

@@ -4,31 +4,44 @@ import heroBg from '../assets/upscalemedia-transformed.jpeg'
 function HeroSection() {
   return (
     <section
-      className="relative h-[650px] flex items-center justify-center text-center px-6"
+      className="relative h-[650px] sm:h-[650px] flex items-center justify-center text-center px-6"
       style={{
         backgroundImage: `url(${heroBg})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'right center',
       }}
     >
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/65"></div>
+      <div className="absolute inset-0 bg-black/70"></div>
+
+      {/* Right fire-accent border */}
+      <div className="absolute top-0 right-0 w-1 h-full bg-orange-600"></div>
 
       {/* Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 text-right max-w-2xl w-full px-4 md:mr-48 lg:mr-300">
 
-        {/* <p className="text-orange-500 text-sm font-semibold tracking-widest uppercase mb-4">
-          مواد حرارية عالية الجودة
-        </p> */}
+        {/* Badge */}
+        <div className="inline-block mb-6">
+          <span className="text-orange-400 text-[10px] tracking-[0.2em] uppercase px-3 py-1 border border-orange-800/50 bg-orange-900/20 rounded-sm">
+            حراريات · صناعة ثقيلة
+          </span>
+        </div>
 
-        <h1 className="text-white text-4xl font-black leading-tight mb-10 mr-250">
-         مؤسسة نضال يوسف للحراريات
+        {/* Main Title */}
+        <h1 className="text-white text-3xl md:text-4xl font-medium leading-snug mb-2">
+          مؤسسة نضال يوسف
+          <br />
+          <span className="text-orange-500">للحراريات</span>
         </h1>
-        <br />
-        <h1 className="text-white text-3xl font-black leading-tight mb-10 mr-250">خبرة في الحراريات… تقود صناعتك بثبات نحو الأداء الأعلى</h1>
-        {/* <p className="text-gray-300 text-lg max-w-xl mx-auto mb-10">
-          نوفر أفضل مواد البناء الحراري من طوب وكاستبل ومونة لخدمة الصناعات الثقيلة والأفران العالية الحرارة
-        </p> */}
+
+        {/* Divider */}
+        <div className="w-10 h-[1px] bg-white/15 mr-0 ml-auto my-5"></div>
+
+        {/* Subtitle */}
+        <p className="text-white/45 text-sm leading-relaxed">
+          خبرة في الحراريات… تقود صناعتك بثبات نحو الأداء الأعلى
+        </p>
+
       </div>
     </section>
   )
