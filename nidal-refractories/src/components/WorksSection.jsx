@@ -257,7 +257,7 @@ function WorksSection() {
     <>
       <section
         dir="rtl"
-        style={{ padding: '96px 32px', backgroundColor: '#0c0c0f', borderTop: '0.5px solid #242430' }}
+        style={{ padding: window.innerWidth < 768 ? '48px 16px' : '96px 32px', backgroundColor: '#0c0c0f', borderTop: '0.5px solid #242430' }}
       >
         <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
 
@@ -308,7 +308,7 @@ function WorksSection() {
           )}
 
           {/* 4-column grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '14px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: window.innerWidth < 768 ? 'repeat(2, 1fr)' : 'repeat(4, 1fr)', gap: '14px' }}>
             {rest.map((item, i) => {
               const size = i % 8 === 1 ? 'wide' : i % 6 === 3 ? 'tall' : 'square'
               return (

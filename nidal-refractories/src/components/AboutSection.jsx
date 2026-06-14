@@ -7,7 +7,7 @@ function AboutSection() {
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row items-center gap-16">
 
         {/* Images — Left */}
-        <div className="relative w-full lg:w-1/2 flex-shrink-0 mb-16 lg:mb-0">
+        <div className="relative w-full lg:w-1/2 flex-shrink-0 mb-20 lg:mb-0">
           {/* Main image */}
           <img
             src={about1}
@@ -19,7 +19,7 @@ function AboutSection() {
           <img
             src={about2}
             alt="معدات نيدال"
-            className="absolute -bottom-8 -left-8 w-28 sm:w-48 md:w-64 rounded-lg border-4 border-[#0c0c0f] object-cover"
+            className="absolute -bottom-8 -left-4 w-24 sm:w-48 md:w-64 rounded-lg border-4 border-[#0c0c0f] object-cover"
             style={{ boxShadow: '0 8px 30px rgba(0,0,0,0.7)' }}
           />
           {/* Orange accent box behind */}
