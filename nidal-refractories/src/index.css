@@ -2,8 +2,12 @@
 
 * {
   font-family: 'Cairo', sans-serif;
+  box-sizing: border-box;
 }
 
 body {
   background-color: #0c0c0f;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
