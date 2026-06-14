@@ -4,7 +4,7 @@ import heroBg from '../assets/upscalemedia-transformed.jpeg'
 function HeroSection() {
   return (
     <section
-      className="relative h-[650px] sm:h-[650px] flex items-center justify-center text-center px-6"
+      className="relative h-screen md:h-[650px] flex items-center justify-center text-center px-6"
       style={{
         backgroundImage: `url(${heroBg})`,
         backgroundSize: 'cover',

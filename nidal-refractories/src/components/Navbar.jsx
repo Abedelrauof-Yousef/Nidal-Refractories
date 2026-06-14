@@ -15,13 +15,13 @@ function Navbar() {
 
   return (
     <nav
-      className="sticky top-0 z-50 border-b border-[#242430] shadow-[0_2px_20px_rgba(0,0,0,0.8)]"
+      className="sticky top-0 z-50 w-full border-b border-[#242430] shadow-[0_2px_20px_rgba(0,0,0,0.8)]"
       style={{ backgroundColor: '#0c0c0f' }}
     >
       {/* Top orange accent line */}
       <div className="h-[3px] w-full bg-gradient-to-r from-transparent via-amber-500 to-transparent" />
 
-      <div className="flex items-center justify-between px-6 py-2">
+      <div className="flex items-center justify-between px-6 py-2 w-full">
 
         {/* Logo */}
         <Link to="/" className="flex-shrink-0">
