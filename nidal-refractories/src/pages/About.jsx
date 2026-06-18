@@ -14,7 +14,7 @@ const stats = [
   { number: '+35', label: 'سنة خبرة', sub: 'في الميدان' },
   { number: '+7', label: 'دول عربية', sub: 'تم العمل فيها' },
   { number: '+50', label: 'مشروع', sub: 'صناعي منجز' },
-  { number: '+1000', label: 'ساعة عمل', sub: 'داخل الأفران' },
+  { number: '+100', label: 'فرن', sub: 'من بناء وصيانة ' },
 ]
 
 const timeline = [
