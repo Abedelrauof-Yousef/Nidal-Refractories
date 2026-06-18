@@ -84,7 +84,7 @@ function ContactCTA() {
             onMouseEnter={e => e.currentTarget.style.background = '#e08d00'}
             onMouseLeave={e => e.currentTarget.style.background = '#f59e0b'}
           >
-            تواصل معنا ←
+            تواصل معنا عبر الإيميل←
           </Link>
 
           <a

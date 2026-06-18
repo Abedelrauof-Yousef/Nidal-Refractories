@@ -85,7 +85,7 @@ function About() {
         </div>
 
         {/* Text */}
-        <div className="relative z-10 w-full lg:w-1/2 lg:mr-30 px-6 lg:px-20 pt-72 lg:pt-0 pb-32">
+        <div className="relative z-10 w-full lg:w-1/2 lg:mr-30 px-6 lg:px-20 pt-72 lg:pt-0 pb-48 lg:pb-32">
 
           <div
             className="inline-block text-xs font-black tracking-widest px-4 py-2 rounded-full mb-8"
