@@ -208,37 +208,165 @@ function About() {
       </section>
 
       {/* ===== PRODUCTS ===== */}
+{/* ===== PRODUCTS ===== */}
       <section className="py-16 lg:py-24 px-4 lg:px-8" style={{ backgroundColor: '#18181f' }}>
         <div className="max-w-6xl mx-auto">
 
-          <div className="text-right mb-10 lg:mb-14">
+          <div className="text-right mb-12 lg:mb-16">
             <p className="text-amber-500 text-xs font-black tracking-widest uppercase mb-4">ما نقدمه</p>
             <h2 className="text-white font-black" style={{ fontSize: 'clamp(1.6rem, 4vw, 2.5rem)' }}>حلول متكاملة في الحراريات</h2>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {products.map((p, i) => (
-              <div
-                key={i}
-                className="group relative overflow-hidden rounded-2xl p-5 lg:p-8 text-right transition-all duration-300 hover:-translate-y-2"
-                style={{ backgroundColor: '#0c0c0f', border: '1px solid #242430' }}
-              >
-                <div
-                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                  style={{ background: 'radial-gradient(circle at 50% 0%, rgba(245,158,11,0.08), transparent 70%)' }}
-                />
-                <div
-                  className="absolute top-0 left-0 right-0 h-0.5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  style={{ backgroundColor: '#f59e0b' }}
-                />
-                <div className="text-3xl lg:text-4xl mb-4 lg:mb-6">{p.icon}</div>
-                <h3 className="text-white font-black text-base lg:text-lg mb-2">{p.name}</h3>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+
+            {/* Card 1 - بناء الأفران : bricks build up filling the whole card */}
+            <div className="product-card" style={{ backgroundColor: '#0c0c0f', border: '1px solid #242430' }}>
+              <svg viewBox="0 0 220 260" className="card-scene">
+                <rect x="14" y="190" width="60" height="40" className="brick" style={{ animationDelay: '0s' }} fill="#f59e0b" />
+                <rect x="78" y="190" width="60" height="40" className="brick" style={{ animationDelay: '0.1s' }} fill="#d97706" />
+                <rect x="142" y="190" width="60" height="40" className="brick" style={{ animationDelay: '0.2s' }} fill="#f59e0b" />
+                <rect x="46" y="150" width="60" height="40" className="brick" style={{ animationDelay: '0.3s' }} fill="#d97706" />
+                <rect x="110" y="150" width="60" height="40" className="brick" style={{ animationDelay: '0.4s' }} fill="#f59e0b" />
+                <rect x="14" y="110" width="60" height="40" className="brick" style={{ animationDelay: '0.5s' }} fill="#f59e0b" />
+                <rect x="78" y="110" width="60" height="40" className="brick" style={{ animationDelay: '0.6s' }} fill="#d97706" />
+                <rect x="142" y="110" width="60" height="40" className="brick" style={{ animationDelay: '0.7s' }} fill="#f59e0b" />
+                <rect x="46" y="70" width="60" height="40" className="brick" style={{ animationDelay: '0.8s' }} fill="#d97706" />
+                <rect x="110" y="70" width="60" height="40" className="brick" style={{ animationDelay: '0.9s' }} fill="#f59e0b" />
+                <line x1="0" y1="230" x2="220" y2="230" stroke="#3a3a48" strokeWidth="3" />
+              </svg>
+              <h3 className="card-title">بناء الأفران</h3>
+            </div>
+
+            {/* Card 2 - صيانة : wrench actively turning a bolt at center */}
+            <div className="product-card" style={{ backgroundColor: '#0c0c0f', border: '1px solid #242430' }}>
+              <svg viewBox="0 0 220 260" className="card-scene">
+                <circle cx="110" cy="130" r="55" fill="none" stroke="#3a3a48" strokeWidth="2" strokeDasharray="6 6" />
+                <g className="bolt-spin" style={{ transformOrigin: '110px 130px' }}>
+                  <polygon points="110,95 128,106 128,128 110,139 92,128 92,106" fill="#1a1a20" stroke="#f59e0b" strokeWidth="2" />
+                  <circle cx="110" cy="117" r="10" fill="#0c0c0f" stroke="#f59e0b" strokeWidth="1.5" />
+                </g>
+                <g className="wrench-tighten" style={{ transformOrigin: '110px 117px' }}>
+                  <rect x="106" y="60" width="8" height="70" rx="4" fill="#f59e0b" />
+                  <circle cx="110" cy="55" r="16" fill="none" stroke="#f59e0b" strokeWidth="6" />
+                </g>
+              </svg>
+              <h3 className="card-title">صيانة</h3>
+            </div>
+
+            {/* Card 3 - بيع مواد حرارية : flames rising and filling the card */}
+            <div className="product-card" style={{ backgroundColor: '#0c0c0f', border: '1px solid #242430' }}>
+              <svg viewBox="0 0 220 260" className="card-scene">
+                <path className="flame-big" d="M110 40 C90 80 60 95 60 140 a50 50 0 0 0 100 0 c0-22-14-36-22-50 c4 22-7 28-14 21 c7-22-3-36-14-71 z" fill="#f59e0b" />
+                <path className="flame-mid" d="M110 80 C98 105 82 113 82 140 a28 28 0 0 0 56 0 c0-13-8-20-12-28 c2 12-7 15-11 11 c4-12-2-20-15-43 z" fill="#fbbf24" />
+                <path className="flame-small" d="M110 110 C103 124 94 128 94 142 a16 16 0 0 0 32 0 c0-7-4-11-7-15 c1 6-4 8-6 6 c2-6-1-11-9-23 z" fill="#fde68a" />
+                <ellipse cx="110" cy="200" rx="70" ry="10" fill="#f59e0b" opacity="0.15" />
+              </svg>
+              <h3 className="card-title">بيع مواد حرارية</h3>
+            </div>
+
+            {/* Card 4 - المواد العازلة : shield charging with layered pulse rings */}
+            <div className="product-card" style={{ backgroundColor: '#0c0c0f', border: '1px solid #242430' }}>
+              <svg viewBox="0 0 220 260" className="card-scene">
+                <circle cx="110" cy="130" r="35" className="pulse-ring" fill="none" stroke="#f59e0b" strokeWidth="2" style={{ animationDelay: '0s' }} />
+                <circle cx="110" cy="130" r="35" className="pulse-ring" fill="none" stroke="#f59e0b" strokeWidth="2" style={{ animationDelay: '0.6s' }} />
+                <circle cx="110" cy="130" r="35" className="pulse-ring" fill="none" stroke="#f59e0b" strokeWidth="2" style={{ animationDelay: '1.2s' }} />
+                <path d="M110 75 L150 90 V125 C150 155 132 175 110 185 C88 175 70 155 70 125 V90 Z" fill="#0c0c0f" stroke="#f59e0b" strokeWidth="3" strokeLinejoin="round" />
+                <path className="check-draw" d="M90 128 L102 142 L132 108" fill="none" stroke="#f59e0b" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <h3 className="card-title">المواد العازلة</h3>
+            </div>
+
           </div>
 
         </div>
       </section>
+
+      <style>{`
+        .product-card {
+          position: relative;
+          border-radius: 16px;
+          overflow: hidden;
+          text-align: right;
+          transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .product-card:hover {
+          transform: translateY(-6px);
+          border-color: #f59e0b66 !important;
+        }
+        .card-scene {
+          width: 100%;
+          height: 200px;
+          display: block;
+        }
+        .card-title {
+          color: #fff;
+          font-weight: 900;
+          font-size: 18px;
+          padding: 18px 20px 22px;
+          margin: 0;
+        }
+
+        .brick {
+          animation: brickUp 0.5s ease-out backwards;
+          transform-box: fill-box;
+        }
+        @keyframes brickUp {
+          0% { transform: translateY(40px); opacity: 0; }
+          100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .bolt-spin {
+          animation: boltTurn 3s linear infinite;
+        }
+        @keyframes boltTurn {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+        .wrench-tighten {
+          animation: wrenchPush 2s ease-in-out infinite;
+        }
+        @keyframes wrenchPush {
+          0%, 100% { transform: rotate(-8deg); }
+          50% { transform: rotate(8deg); }
+        }
+
+        .flame-big {
+          animation: flameSway 1.6s ease-in-out infinite;
+          transform-box: fill-box;
+          transform-origin: bottom center;
+        }
+        .flame-mid {
+          animation: flameSway 1.3s ease-in-out infinite reverse;
+          transform-box: fill-box;
+          transform-origin: bottom center;
+        }
+        .flame-small {
+          animation: flameSway 1s ease-in-out infinite;
+          transform-box: fill-box;
+          transform-origin: bottom center;
+        }
+        @keyframes flameSway {
+          0%, 100% { transform: scaleY(1) scaleX(1) rotate(0deg); }
+          33% { transform: scaleY(1.06) scaleX(0.96) rotate(-1.5deg); }
+          66% { transform: scaleY(0.96) scaleX(1.04) rotate(1.5deg); }
+        }
+
+        .pulse-ring {
+          animation: ringPulse 1.8s ease-out infinite;
+          transform-box: fill-box;
+          transform-origin: center;
+        }
+        @keyframes ringPulse {
+          0% { r: 35; opacity: 0.8; }
+          100% { r: 60; opacity: 0; }
+        }
+        .check-draw {
+          stroke-dasharray: 60;
+          stroke-dashoffset: 60;
+          animation: checkIn 0.6s ease-out 0.3s infinite;
+          animation-iteration-count: 1;
+        }
+      `}</style>
 
       {/* ===== CLOSING QUOTE ===== */}
       <section

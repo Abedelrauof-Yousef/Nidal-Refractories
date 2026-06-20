@@ -38,7 +38,7 @@ function Footer() {
                 style={{ color: '#9ca3af', fontSize: '13px', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '8px' }}
               >
                 <span style={{ color: '#f59e0b' }}>📞</span>
-                +96789893991
+                962789893991+
               </a>
               <a
                 href="mailto:info@nidal-refractories.com"
@@ -77,30 +77,41 @@ function Footer() {
           </div>
 
           {/* Products */}
-          <div>
-            <p style={{ margin: '0 0 16px', color: '#f59e0b', fontSize: '11px', fontWeight: 600, letterSpacing: '0.1em' }}>
-              منتجاتنا
-            </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
-              {['طوب حراري', 'اسمنت حراري', 'خرسانة حرارية'].map(p => (
-                <Link
-                  key={p}
-                  to="/products"
-                  style={{
-                    color: '#6b7280',
-                    fontSize: '13.5px',
-                    textDecoration: 'none',
-                    fontWeight: 500,
-                    transition: 'color 0.2s',
-                  }}
-                  onMouseEnter={e => e.currentTarget.style.color = '#ffffff'}
-                  onMouseLeave={e => e.currentTarget.style.color = '#6b7280'}
-                >
-                  {p}
-                </Link>
-              ))}
-            </div>
-          </div>
+<div>
+  <p
+    style={{
+      margin: '0 0 16px',
+      color: '#f59e0b',
+      fontSize: '11px',
+      fontWeight: 600,
+      letterSpacing: '0.1em',
+    }}
+  >
+    التواصل الاجتماعي
+  </p>
+
+  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+    <a
+      href="https://web.facebook.com/ndal.ywsf"
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        color: '#6b7280',
+        fontSize: '13.5px',
+        textDecoration: 'none',
+        fontWeight: 500,
+        transition: 'color 0.2s',
+      }}
+      onMouseEnter={e => (e.currentTarget.style.color = '#ffffff')}
+      onMouseLeave={e => (e.currentTarget.style.color = '#6b7280')}
+    >
+      فيس بوك
+    </a>
+    
+
+    
+  </div>
+</div>
 
         </div>
       </div>

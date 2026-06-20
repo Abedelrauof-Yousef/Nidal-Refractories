@@ -14,6 +14,7 @@ import work11 from '../assets/work11.jpg'
 import vid1 from '../assets/VID-20260611-WA0016.mp4'
 import vid2 from '../assets/VID-20260611-WA0019.mp4'
 import vid3 from '../assets/VID-20260611-WA0020.mp4'
+import vid4 from '../assets/VID-20260610-WA0025.mp4'
 
 const categories = [
   { id: 'all',      label: 'الكل' },
@@ -35,9 +36,10 @@ const media = [
   { id: 9,  type: 'image', src: work4,  category: 'brick',    featured: false, label: 'تفاصيل بناء جدار الفرن' },
   { id: 10, type: 'image', src: work9,  category: 'concrete', featured: false, label: 'ألواح خرسانة حرارية' },
   { id: 11, type: 'image', src: work11, category: 'concrete', featured: false, label: 'فرن صناعي ضخم' },
-  { id: 12, type: 'video', src: vid1,   category: 'video',    featured: false, label: 'فيديو مشروع ١' },
-  { id: 13, type: 'video', src: vid2,   category: 'video',    featured: false, label: 'فيديو مشروع ٢' },
-  { id: 14, type: 'video', src: vid3,   category: 'video',    featured: false, label: 'فيديو مشروع ٣' },
+  { id: 12, type: 'video', src: vid1,   category: 'video',    featured: false, label: 'فيديو ١' },
+  { id: 13, type: 'video', src: vid2,   category: 'video',    featured: false, label: 'فيديو ٢' },
+  { id: 14, type: 'video', src: vid3,   category: 'video',    featured: false, label: 'فيديو ٣' },
+  { id: 15, type: 'video', src: vid4,   category: 'video',    featured: false, label: 'فيديو 4' },
 ]
 
 function MediaTile({ item, size, onClick }) {
@@ -320,7 +322,7 @@ function WorksSection() {
           </div>
 
           {/* Footer count */}
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
+          {/* <div style={{ display: 'flex', justifyContent: 'center', marginTop: '40px' }}>
             <div style={{
               padding: '8px 22px', borderRadius: '99px',
               border: '0.5px solid #2e2e3a',
@@ -328,7 +330,7 @@ function WorksSection() {
             }}>
               {filtered.length} عمل منجز
             </div>
-          </div>
+          </div> */}
 
         </div>
       </section>

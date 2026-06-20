@@ -3,14 +3,12 @@ import heroBg from '../assets/upscalemedia-transformed.jpeg'
 
 function HeroSection() {
   return (
-    <section
-      className="relative h-screen md:h-[650px] flex items-center justify-center text-center px-6"
-      style={{
-        backgroundImage: `url(${heroBg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'right center',
-      }}
-    >
+<section
+  className="relative h-screen md:h-[650px] flex items-center justify-center text-center px-6 bg-cover bg-[800px_center] md:bg-[right_center]"
+  style={{
+    backgroundImage: `url(${heroBg})`,
+  }}
+>
       {/* Dark overlay */}
       <div className="absolute inset-0 bg-black/70"></div>
 

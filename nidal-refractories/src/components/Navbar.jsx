@@ -8,7 +8,7 @@ function Navbar() {
 
   const links = [
     { to: '/', label: 'الرئيسية' },
-    { to: '/products', label: 'المنتجات' },
+    { to: '/products', label: 'الخدمات والمنتجات' },
     { to: '/about', label: 'من نحن' },
     { to: '/contact', label: 'تواصل معنا' },
   ]

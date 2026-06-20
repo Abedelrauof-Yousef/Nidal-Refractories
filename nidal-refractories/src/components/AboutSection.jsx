@@ -36,33 +36,20 @@ function AboutSection() {
 
           {/* Heading */}
           <h2 className="text-white text-4xl font-black leading-snug mb-6">
-            ثلاثون عاماً من
+          خمس وثلاثون عاماً
             <br />
-            <span className="text-amber-500">الخبرة والجودة</span>
+            <span className="text-amber-500">من الخبرة والجودة</span>
           </h2>
 
           {/* Description */}
           <p className="text-gray-400 text-lg leading-relaxed mb-6">
-            يُعد نضال يوسف من الخبراء البارزين في مجال المواد الحرارية، بخبرة تمتد لأكثر من ثلاثين عاماً في تقديم الحلول الحرارية للصناعات الثقيلة.
+           يمتلك نضال يوسف خبرة تتجاوز 35 عاماً في بناء وصيانة الأفران الصناعية، حيث عمل على بناء وصيانة أفران المصانع والمنشآت الثقيلة بكفاءة عالية.
           </p>
 
           <p className="text-gray-400 text-lg leading-relaxed mb-10">
-            على مدار هذه السنوات، اكتسب خبرة عميقة في خدمة أفران الصهر والمنشآت الصناعية، مع التركيز على اختيار أفضل المواد الخام لضمان أعلى مستويات الأداء تحت درجات الحرارة العالية، وبجودة تعتمد عليها المصانع في أكثر البيئات قسوة.
+           وقد أكسبته هذه الخبرة العملية معرفة عميقة بالمواد الحرارية وخصائصها، مما جعله قادراً على اختيار وتوفير الحلول والمواد المناسبة التي تخدم احتياجات الأفران الصناعية بأعلى مستويات الأداء والجودة.
           </p>
 
-          {/* Stats */}
-          <div className="flex gap-10 justify-end">
-            <div className="text-center">
-              <p className="text-amber-500 text-4xl font-black">+30</p>
-              <p className="text-gray-400 text-sm mt-1">سنة خبرة</p>
-            </div>
-            <div className="w-px bg-[#242430]" />
-            <div className="text-center">
-              <p className="text-amber-500 text-4xl font-black">24</p>
-              <p className="text-gray-400 text-sm mt-1">مشروع منجز</p>
-            </div>
-            <div className="w-px bg-[#242430]" />
-          </div>
 
         </div>
       </div>
